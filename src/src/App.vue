@@ -1,8 +1,11 @@
 <template>
   <div id="app">
     <head-bar></head-bar>
-    <img src="./assets/logo.png">
-    <router-view/>
+    <el-row>
+      <el-col :span="4"><div class="grid-side"></div></el-col>
+      <el-col :span="16"><router-view/></el-col>
+      <el-col :span="4"><div class="grid-side"></div></el-col>
+    </el-row>
   </div>
 </template>
 
@@ -15,6 +18,7 @@ export default {
 <style>
 body{
   margin: 0;
+  padding: 0;
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -22,5 +26,9 @@ body{
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+.grid-side {
+    border-radius: 4px;
+    min-height: 36px;
 }
 </style>
